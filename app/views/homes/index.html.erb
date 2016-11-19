@@ -1,0 +1,41 @@
+<h1>Your home page</h1>
+<div align="center" >
+	
+<%= form_for @post do |f| %>
+
+<%= f.label :title %>
+<%= f.text_field :title %> <br>
+
+<%= f.label :body %>
+<%= f.text_field :body %><br>
+
+<%= f.submit :create %>
+<% end %>
+
+</div>
+
+<div align="right" class="ScrollStyle">
+<h3> friends </h3>
+<% @friends.each do |f| %>
+<%= f.name %>
+<br>
+<%end %>
+	
+</div>
+<div class="ScrollStyle">
+<%@posts.each do |p| %>
+
+
+
+<div align="center" >
+<%= "Title:" %> <br>
+<%= p.title %> <br>
+<%= "posts body:" %> <br>
+<%= p.body %>
+</div>
+<br>
+<br>
+<% end %>
+</div>
+
+
